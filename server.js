@@ -19,7 +19,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
-app.get('/',(request, response)=>{
+app.get('https://task-list-100devs.herokuapp.com/',(request, response)=>{
     db.collection('tasks').find().toArray()
     .then(data => {
         response.render('index.ejs', { info: data })
