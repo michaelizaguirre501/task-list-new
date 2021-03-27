@@ -26,6 +26,15 @@ app.get('/',(request, response)=>{
     })
     .catch(error => console.error(error))
 })
+app.post('/addTask', (request, response) => {
+    db.collection('tasks').insertOne(request.body)
+    .then(result => {
+        console.log('Task Added')
+        response.redirect('/')
+    })
+    .catch(error => console.error(error))
+})
+
 
 
 
