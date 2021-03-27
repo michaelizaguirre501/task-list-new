@@ -11,7 +11,7 @@ MongoClient.connect(dbConnectionStr, {useUnifiedTopology: true})
             .then(client =>{
                 console.log(`Connected to ${dbName} Database`)
                 db = client.db(dbName)
-                const taskCollection =db.collection('tasks')
+                
             })
 
 app.set('view engine', 'ejs')
