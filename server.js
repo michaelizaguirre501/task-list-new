@@ -26,6 +26,7 @@ app.get('/',(request, response)=>{
     })
     .catch(error => console.error(error))
 })
+
 app.post('/addTask', (request, response) => {
     db.collection('tasks').insertOne(request.body)
     .then(result => {
@@ -35,7 +36,15 @@ app.post('/addTask', (request, response) => {
     .catch(error => console.error(error))
 })
 
+app.delete('/deleteTask', (request, response) => {
+    db.collection('tasks').deleteOne({taskName: request.body.taskNameS})
+    .then(result => {
+        console.log('Task Deleted')
+        response.json('Task Deleted')
+    })
+    .catch(error => console.error(error))
 
+})
 
 
 app.listen(process.env.PORT || PORT, ()=>{
