@@ -1,12 +1,10 @@
-const dotenv = require('dotenv')
-dotenv.config()
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 8000
 
 let db,
-    dbConnectionStr = process.env.key,
+    dbConnectionStr = 'mongodb+srv://michaelizaguirre:tasklistdemo@cluster0.qapjw.mongodb.net/task-list?retryWrites=true&w=majority',
     dbName = 'task-list'
 
 MongoClient.connect(dbConnectionStr, {
