@@ -1,10 +1,11 @@
+const config = require('./config.js')
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 8000
 
 let db,
-    dbConnectionStr = 'mongodb+srv://michaelizaguirre:tasklistdemo@cluster0.qapjw.mongodb.net/task-list?retryWrites=true&w=majority',
+    dbConnectionStr = `mongodb+srv://michaelizaguirre:${config.key}@cluster0.qapjw.mongodb.net/task-list?retryWrites=true&w=majority`,
     dbName = 'task-list'
 
 MongoClient.connect(dbConnectionStr, {
