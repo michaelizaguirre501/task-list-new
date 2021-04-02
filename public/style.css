@@ -82,6 +82,7 @@ input {
     border-bottom: white .1rem dotted;
     font-family: 'Montserrat', sans-serif;
     font-size: .9rem;
+    color: white;
 }
 
 ::placeholder {
