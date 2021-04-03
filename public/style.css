@@ -7,6 +7,7 @@ body {
     background: linear-gradient(0deg, rgba(129, 127, 128, 0.3), rgba(245, 77, 175, 0.5)), url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 section.container {
