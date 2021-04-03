@@ -1,5 +1,5 @@
 html {
-    font-size: 25px;
+    font-size: 16px;
     height: 100vh;
 }
 
@@ -12,12 +12,10 @@ body {
 
 section.container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 5rem;
     flex-wrap: wrap;
 }
-
-
 
 h2,
 ul,
@@ -29,9 +27,8 @@ button {
 }
 
 .name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-
 }
 
 form,
@@ -45,14 +42,16 @@ h1 {
 }
 
 .description {
-    font-size: .8rem;
+    font-size: 1rem;
     font-family: 'Playfair Display', serif;
 }
 
 h2 {
     text-decoration: underline;
-    margin: auto;
+    margin-left: 2rem;
     color: rgb(253, 253, 253);
+    font-size: 2rem;
+    text-shadow: 2px 2px rgb(7, 7, 7);
 }
 
 button {
@@ -61,7 +60,12 @@ button {
     border-radius: 5%;
     background: rgba(22, 22, 22, 0.5);
     color: white;
-    font-size: .8rem;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background: rgba(102, 12, 12, 0.5);
+
 }
 
 li {
@@ -82,7 +86,7 @@ input {
     background-color: transparent;
     border-bottom: white .1rem dotted;
     font-family: 'Montserrat', sans-serif;
-    font-size: .9rem;
+    font-size: 1.4rem;
     color: white;
 }
 
@@ -90,6 +94,7 @@ input {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 @media only screen and (max-width: 800px) {
     html {
